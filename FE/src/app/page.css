@@ -4,7 +4,9 @@
   padding: 1em;
   text-align: center;
 }
-
+:root{
+  font-size: 20px;
+}
 .kol-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

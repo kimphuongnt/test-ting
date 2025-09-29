@@ -49,10 +49,7 @@ const KolCard: React.FC<Props> = ({ kols, loading, error, onView }) => {
               <col style={{ width: "9rem" }} />
               <col style={{ width: "7rem" }} />
               <col style={{ width: "10rem" }} />
-              <col style={{ width: "10rem" }} />
-              <col style={{ width: "10rem" }} />
-              <col style={{ width: "10rem" }} />
-              <col style={{ width: "9rem" }} />
+              
               <col style={{ width: "10rem" }} />
               <col style={{ width: "9rem" }} />
               <col style={{ width: "9rem" }} />
@@ -67,11 +64,7 @@ const KolCard: React.FC<Props> = ({ kols, loading, error, onView }) => {
                   "Lương",
                   "Xác minh",
                   "Ảnh",
-                  "Hoạt động",
-                  "Tạo bởi",
-                  "Ngày tạo",
-                  "Ngày sửa",
-                  "Trạng thái",
+                  "Cập nhật gần nhất",
                   "Onboarding?",
                   "Liveness?",
                   "Xem",
@@ -137,16 +130,7 @@ const KolCard: React.FC<Props> = ({ kols, loading, error, onView }) => {
                         <div className="kc-avatar kc-avatar--placeholder" />
                       )}
                     </td>
-                    <td className="kc-td kc-truncate">{formatDate(kol.activeDate?.toString())}</td>
-                    <td className="kc-td kc-truncate">{kol.createdBy ?? "—"}</td>
-                    <td className="kc-td kc-truncate">{formatDate(kol.createdDate?.toString())}</td>
                     <td className="kc-td kc-truncate">{formatDate(kol.modifiedDate?.toString())}</td>
-                    <td className="kc-td">
-                      <div className="kc-row">
-                        <Dot active={kol.active} />
-                        <span className="kc-xs">{kol.active ? "Active" : "Inactive"}</span>
-                      </div>
-                    </td>
                     <td className="kc-td">
                       <span className={kol.isOnBoarding ? "kc-chip kc-chip--ok" : "kc-chip kc-chip--gray"}>
                         {kol.isOnBoarding ? "Đang onboard" : "Chưa"}
