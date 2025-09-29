@@ -1,11 +1,77 @@
+.header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
 
-/* 
-    This is the CSS file for the page component. 
-    It contains the styles for the header of the page.
-*/
-.header { 
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
+.kol-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.kol-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #fafafa;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.kol-card:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+}
+
+.kol-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+}
+/* Tabs dark với underline mảnh & animate giống ảnh */
+.tab-btn {
+  @apply relative py-4 text-sm font-medium text-slate-300 transition-colors;
+}
+table.border-collapse th,
+table.border-collapse td {
+  border: 1px solid #d1d5db; /* Tailwind's gray-300 */
+}
+.tab-btn:hover {
+  @apply text-slate-100;
+}
+
+.tab-btn.is-active {
+  @apply text-indigo-400;
+}
+
+/* Vạch gạch chân - animate theo tab */
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: rgb(99 102 241); /* indigo-500 */
+  border-radius: 9999px;
+  transition: transform 200ms ease, width 200ms ease;
+  will-change: transform, width;
+  pointer-events: none;
+}
+
+/* Tuỳ chọn: tinh chỉnh container tabs (đã mix bằng Tailwind trong JSX) */
+.tabs-underlined {
+  /* để trống nếu không cần thêm */
+}
+.tab-btn {
+  @apply whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-gray-500;
+}
+
+.tab-btn:hover {
+  @apply text-gray-700 border-gray-300;
+}
+
+.tab-btn.is-active {
+  @apply border-blue-500 text-blue-600;
 }
