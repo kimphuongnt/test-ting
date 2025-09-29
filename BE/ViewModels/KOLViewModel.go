@@ -9,5 +9,5 @@ type KolViewModel struct {
 	PageSize     int64         `json:"pageSize"`     //The page size
 	Guid         string        `json:"guid"`
 	TotalCount   int64         `json:"totalCount"`
-	KOL          []*DTO.KolDTO `json:"kol"`
+	KOL          []*DTO.KolDTO `json:"KolInformation"`
 }
